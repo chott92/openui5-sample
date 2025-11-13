@@ -7,6 +7,11 @@
 		"node": "^20.11.0 || >=22.0.0",
 		"npm": ">= 8"
 	},
+	"dependencies": {
+		"@cap-js-community/odata-v2-adapter": "^1.15.1",
+		"@sap/cds": "^9",
+		"express": "^4"
+	},
 	"scripts": {
 		"start": "ui5 serve --port 8080",
 		"lint": "eslint webapp && ui5lint",
@@ -14,7 +19,8 @@
 		"test": "npm run lint && npm run test-runner",
 		"build": "ui5 build -a --clean-dest",
 		"build-self-contained": "ui5 build self-contained -a --clean-dest",
-		"serve-dist": "ws --compress -d dist"
+		"serve-dist": "ws --compress -d dist",
+		"start-cds": "cds-serve"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.38.0",
@@ -25,6 +31,18 @@
 		"globals": "^16.5.0",
 		"local-web-server": "^5.4.0",
 		"rimraf": "^6.0.1",
-		"ui5-test-runner": "^5.10.1"
+		"ui5-test-runner": "^5.10.1",
+		"@cap-js/cds-types": "^0.11.0",
+		"@cap-js/sqlite": "^2"
+	},
+	"cds": {
+		"requires": {
+			"db": {
+				"kind": "sqlite",
+				"credentials": {
+					"url": "db.sqlite"
+				}
+			}
+		}
 	}
 }
