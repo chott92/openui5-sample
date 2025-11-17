@@ -10,6 +10,7 @@
 	"dependencies": {
 		"@cap-js-community/odata-v2-adapter": "^1.15.1",
 		"@sap/cds": "^9",
+		"cors": "^2.8.5",
 		"express": "^4"
 	},
 	"scripts": {
@@ -23,6 +24,8 @@
 		"start-cds": "cds-serve"
 	},
 	"devDependencies": {
+		"@cap-js/cds-types": "^0.11.0",
+		"@cap-js/sqlite": "^2",
 		"@eslint/js": "^9.38.0",
 		"@ui5/cli": "^4.0.34",
 		"@ui5/linter": "^1.20.2",
@@ -31,9 +34,7 @@
 		"globals": "^16.5.0",
 		"local-web-server": "^5.4.0",
 		"rimraf": "^6.0.1",
-		"ui5-test-runner": "^5.10.1",
-		"@cap-js/cds-types": "^0.11.0",
-		"@cap-js/sqlite": "^2"
+		"ui5-test-runner": "^5.10.1"
 	},
 	"cds": {
 		"requires": {
